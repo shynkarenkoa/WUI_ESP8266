@@ -10,27 +10,36 @@ html(lang='ru')
 
     link(rel='stylesheet', type='text/css', href='./css/style.css')
 
-    mixin nav(...items)
+    mixin navUl(...items)
       nav
         ul
           each item in items
             li
               a(href= '#'+ item)= item
+
+    mixin navSelect(...items)
+      nav
+        select(onChange="window.location.href=this.value")
+          each item in items
+            option(value= '#'+ item)= item
    
   body
     header
-      div.section-class-name(data-section-name="header")
+      div#main.section-class-name(data-section-name="_main")
         div.logo
+          img(src='./css/logo.png', alt='My SmartHouse')
           h1 My SmartHouse
         div.menuFull
-          +nav('main', 'about', 'services', 'contacts')
+          +navUl('main', 'about', 'services', 'contacts')
         div.menuShort
+          +navSelect('main', 'about', 'services', 'contacts')
         div.thesis
     main  
-      div.section-class-name(data-section-name="main")
+      div#about.section-class-name(data-section-name="_about")
         div
           p Test
-      div.section-class-name(data-section-name="footer")
+      div#services.section-class-name(data-section-name="_services")
+      div#contacts.section-class-name(data-section-name="_contacts")
 
 
 

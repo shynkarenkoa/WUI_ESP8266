@@ -2,6 +2,8 @@ a, ul
 {
 	all: unset;
 }
+
+
  
 body
 {
@@ -11,16 +13,50 @@ body
 	background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 440px)
+{
+	.menuShort
+	{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 440px)
+{
+	.menuFull
+	{
+		display: none;
+	}
+
+	.menuShort
+	{
+		display: block;
+	}
+}
+
 .section-class-name
 {
-	margin: 0px 50px; 
+	margin: 0px 50px;
+	padding-top: 10px;
 }
 
 .logo
 {
-	width: 340px;
+	width: 320px;
 	height: 230px;
 	background-color: #ffffff;
+}
+
+.logo img
+{
+	width: 150px;
+	height: 150px;
+	margin-left: 50px;
+}
+
+.logo h1
+{
+	padding-left: 15px;
 }
 
 .menuFull li
@@ -37,8 +73,14 @@ body
 	padding: 35px 30px;
 
 	position: relative;
-	left: 270px;
+	left: 250px;
 	top: -200px;
+}
 
+.menuShort select
+{
+	width: 320px;
+	text-align-last:center;
+	text-transform: uppercase;
 }
 

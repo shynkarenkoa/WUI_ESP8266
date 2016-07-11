@@ -32,7 +32,7 @@ gulp.task("postcss", () =>
     return gulp.src("./less/css/*.css")
         .pipe(postcss(processors))
         .pipe(gulp.dest("./app/css/"))
-    // .pipe( postcss([ require('autoprefixer') ]) )
+	.pipe( postcss([ require('autoprefixer') ]) )
 
         .pipe(debug())
 })

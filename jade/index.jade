@@ -4,16 +4,33 @@ html(lang='ru')
     title My SmartHouse
     meta(charset="utf-8")
  
-    script(src='./jquery-3.0.0.min.js')
-    script(src='./jquery.scrollify.min.js')
-    script(src='./script.js' defer)
+    script(src='./script/jquery-3.0.0.min.js')
+    script(src='./script/jquery.scrollify.min.js')
+    script(src='./script/script.js' defer)
 
     link(rel='stylesheet', type='text/css', href='./css/style.css')
+
+    mixin nav(...items)
+      nav
+        ul
+          each item in items
+            li
+              a(href= '#'+ item)= item
    
   body
-    div.section-class-name(data-section-name="header", style="background: red; hight: 100 px")
-    div.section-class-name(data-section-name="main")
-    div.section-class-name(data-section-name="footer")
+    header
+      div.section-class-name(data-section-name="header")
+        div.logo
+          h1 My SmartHouse
+        div.menuFull
+          +nav('main', 'about', 'services', 'contacts')
+        div.menuShort
+        div.thesis
+    main  
+      div.section-class-name(data-section-name="main")
+        div
+          p Test
+      div.section-class-name(data-section-name="footer")
 
 
 

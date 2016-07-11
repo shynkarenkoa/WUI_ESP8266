@@ -1,0 +1,30 @@
+{
+  "name": "gulppp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm install -g gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neomulik/Gulp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neomulik/Gulp/issues"
+  },
+  "homepage": "https://github.com/neomulik/Gulp#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.1",
+    "gulp-connect": "~3.2.1",
+    "gulp-debug": "2.1.2",
+    "gulp-jade": "1.1.0",
+    "gulp-less": "3.0.5",
+    "gulp-postcss": "6.1.0"
+  }
+}
